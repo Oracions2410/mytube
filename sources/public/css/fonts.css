@@ -1,0 +1,17 @@
+/* font-family: Abel, sans-serif; */
+@font-face {
+    src: url('../fonts/Abel/Abel-Regular.ttf');
+    font-family: Abel;
+}
+
+/* font-family: Josefin, sans-serif; */
+@font-face {
+    src: url('../fonts/Josefin_Sans/JosefinSans-Regular.ttf');
+    font-family: Josefin;
+}
+
+/* font-family: livvic, sans-serif; */
+@font-face {
+    src: url('../fonts/Livvic/Livvic-SemiBold.ttf');
+    font-family: livvic;
+}
