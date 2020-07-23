@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+
+//variables
+$mainFont: 'Roboto', sans-serif;
+$titleFontWeight: 400;
+$textFontWeight: 300;
+
+// color
+$grayDark: #3B3B3B;
+$grayLigth: #C4C4C4;
+$primaryGreen: #48CFAD;
+$black: #2B2B2B;
+$headerBackground: #FFF;
+$textColor: #888888;
+$footerColor: #EBEBEB;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 1990px;
+    width: 100%;
+    font-family: $mainFont;
+    font-weight: 400;
+    background-image: url('../images/background-image.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/* HEADER */
+.header {
+    width: 100%;
+    min-height: 50px;
+    height: 10vh;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .14);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 7%;
+    padding-right: 7%;
+    background-color: $headerBackground;
+    position: relative;
+    margin-bottom: 6vh;
+
+    .logo {
+        position: relative;
+        min-height: 50px;
+        height: 40%;
+        display: flex;
+        align-items: center;
+
+        img {
+            width: auto;
+            height: 90%;
+        }
+    }
+
+    .search-bar-card {
+        width: 54%;
+        max-width: 1036px;
+        background-color: red;
+        height: 42px;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+
+        .search-bar-input {
+            position: absolute;
+            left: 0;right: 0;bottom:0;top:0;
+            width: 100%;
+            padding: 0 29px;
+            font-size: 20px;
+            color: $grayLigth;
+            border: none;
+            outline: 1px solid red;
+
+            &::placeholder {
+                color: $grayLigth;
+            }
+        }
+        .search-bar-icon {
+            position: absolute;
+            right: 25px;
+            top: 8px;
+        }
+
+    }
+
+}
+
+
+/* CONTAINER AND VIDEOS LIST */
+
+.container {
+    background-color: coral;
+    width: 80%;
+    margin: auto;
+    padding: 4vh 3%;
+    background-color: rgba(255, 255, 255, .3);
+
+    .content {
+
+        .video-card {
+            width: 100%;
+
+            .video-card-inner {
+                width: 100%;
+
+                .videos-list-line {
+                    width: 75%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+
+                    .video-item {
+                        background-color: transparent;
+                        padding: 0 8px;
+
+                        .video-screen {
+                            background-color: $grayDark;
+
+                            .video-pause-image {
+
+                            }
+                        }
+                        .video-infos {
+                            .video-author-avatar  {
+                                img {
+
+                                }
+                            }
+                            .video-text {
+                                
+                                .video-description {
+
+                                }
+                                .video-author-name {
+
+                                }
+                                .likes-and-published-date{
+                                    .likes {
+
+                                    }
+                                    .published-date {
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &.first-block {
+
+                    }
+                    &.second-block {
+
+                    }
+                    &.last-block {
+
+                    }
+                }
+                .videos-separator {
+                    img {
+                        height: 61px;
+                        width: 100%;
+                        margin: 3vh 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* CONTAINER AND VIDEOS LIST */
+.footer {
+    width: 100%;
+    height: 77px;
+    background-color: $footerColor;
+    text-align: center;
+    line-height: 77px;
+    margin-top: 100px;
+
+    .footer-text {
+        display: inline;
+        font-weight: 300;
+        color: $textColor;
+        font-size: 20px;
+    }
+}
