@@ -5,25 +5,25 @@ import PlayList from './PlayList/PlayList'
 const VideoDetails = () => {
     return <React.Fragment>
 
-        <div class="video-player">
-            <div class="player">
-                <video class="player-inner" src="./videos/video.mp4" controls></video>
+        <div className="video-player">
+            <div className="player">
+                <video className="player-inner" src="./videos/video.mp4" controls></video>
             </div>
-            <div class="video-infos">
-                <div class="video-author-avatar">
+            <div className="video-infos">
+                <div className="video-author-avatar">
                     <img src="./images/author-img.png" alt="author" />
                 </div>
-                <div class="video-details">
-                    <div class="video-title">Minato à l'Akatsuki - The way of the ninja</div>
-                    <div class="video-channel">Naruto way</div>
-                    <div class="more-details flex-row">
-                        <div class="video-views">240 vues</div>
-                        <div class="video-date">il ya 4 jours</div>
+                <div className="video-details">
+                    <div className="video-title">Minato à l'Akatsuki - The way of the ninja</div>
+                    <div className="video-channel">Naruto way</div>
+                    <div className="more-details flex-row">
+                        <div className="video-views">240 vues</div>
+                        <div className="video-date">il ya 4 jours</div>
                     </div>
                 </div>
             </div>
-            <div class="video-player-separator">
-                <div class="separator"></div>
+            <div className="video-player-separator">
+                <div className="separator"></div>
             </div>
         </div>
 

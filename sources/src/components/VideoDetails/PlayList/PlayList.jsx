@@ -4,25 +4,25 @@ import { Link } from 'react-router-dom'
 const PlayList = () => {
     return <React.Fragment>
 
-        <div class="videos-playlist">
-            <div class="playlist-head">Voir aussi</div>
-            <div class="playlist">
+        <div className="videos-playlist">
+            <div className="playlist-head">Voir aussi</div>
+            <div className="playlist">
 
-                <div class="video-item">
+                <div className="video-item">
 
-                    <div class="video-screen">
+                    <div className="video-screen">
                         <Link to="/videoID">
                             <img src="./images/videos-img.png" alt="video" />
                         </Link>
-                        <div class="video-time">20:34</div>
+                        <div className="video-time">20:34</div>
                     </div>
 
-                    <div class="video-infos">
+                    <div className="video-infos">
                         <Link to="/videoId">
-                            <div class="video-title">Minato à l'Akatsuki - The way of the ninja</div>
-                            <div class="video-channel">Naruto way</div>
-                            <div class="video-views">240 vues</div>
-                            <div class="video-date">il ya 4 jours</div>
+                            <div className="video-title">Minato à l'Akatsuki - The way of the ninja</div>
+                            <div className="video-channel">Naruto way</div>
+                            <div className="video-views">240 vues</div>
+                            <div className="video-date">il ya 4 jours</div>
 
                         </Link>
                     </div>

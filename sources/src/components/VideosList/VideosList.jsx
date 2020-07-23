@@ -3,33 +3,33 @@ import { Link } from 'react-router-dom'
 
 const VideosList = () => {
     return <React.Fragment>
-        <div class="videos-list">
+        <div className="videos-list">
 
 
             <div className="videos-line">
 
                 <div className="video-item">
-                    <div class="video-screen">
+                    <div className="video-screen">
 
                         <Link to="/videoId">
                             <img src="./images/videos-img.png" alt="video" />
                         </Link>
 
-                        <span class="video-time">10:03</span>
+                        <span className="video-time">10:03</span>
 
                     </div>
-                    <div class="video-infos">
-                        <div class="author-avatar">
+                    <div className="video-infos">
+                        <div className="author-avatar">
                             <img src="./images/author-img.png" alt="author" />
                         </div>
-                        <div class="video-details">
+                        <div className="video-details">
 
                             <Link to="/videoId">
-                                <div class="video-title">Minato a l'Akatsuki - The way of the ninja</div>
-                                <div class="video-channel">Naruto Way</div>
-                                <div class="more-details">
-                                    <div class="video-views">243k vues</div>
-                                    <div class="video-date">Il ya 4 jours</div>
+                                <div className="video-title">Minato a l'Akatsuki - The way of the ninja</div>
+                                <div className="video-channel">Naruto Way</div>
+                                <div className="more-details">
+                                    <div className="video-views">243k vues</div>
+                                    <div className="video-date">Il ya 4 jours</div>
                                 </div>
                             </Link>
 
@@ -41,27 +41,27 @@ const VideosList = () => {
 
 
                 <div className="video-item">
-                    <div class="video-screen">
+                    <div className="video-screen">
 
                         <Link to="/videoId">
                             <img src="./images/videos-img.png" alt="video" />
                         </Link>
 
-                        <span class="video-time">10:03</span>
+                        <span className="video-time">10:03</span>
 
                     </div>
-                    <div class="video-infos">
-                        <div class="author-avatar">
+                    <div className="video-infos">
+                        <div className="author-avatar">
                             <img src="./images/author-img.png" alt="author" />
                         </div>
-                        <div class="video-details">
+                        <div className="video-details">
 
                             <Link to="/videoId">
-                                <div class="video-title">Minato a l'Akatsuki - The way of the ninja</div>
-                                <div class="video-channel">Naruto Way</div>
-                                <div class="more-details">
-                                    <div class="video-views">243k vues</div>
-                                    <div class="video-date">Il ya 4 jours</div>
+                                <div className="video-title">Minato a l'Akatsuki - The way of the ninja</div>
+                                <div className="video-channel">Naruto Way</div>
+                                <div className="more-details">
+                                    <div className="video-views">243k vues</div>
+                                    <div className="video-date">Il ya 4 jours</div>
                                 </div>
                             </Link>
 
@@ -73,27 +73,27 @@ const VideosList = () => {
 
 
                 <div className="video-item">
-                    <div class="video-screen">
+                    <div className="video-screen">
 
                         <Link to="/videoId">
                             <img src="./images/videos-img.png" alt="video" />
                         </Link>
 
-                        <span class="video-time">10:03</span>
+                        <span className="video-time">10:03</span>
 
                     </div>
-                    <div class="video-infos">
-                        <div class="author-avatar">
+                    <div className="video-infos">
+                        <div className="author-avatar">
                             <img src="./images/author-img.png" alt="author" />
                         </div>
-                        <div class="video-details">
+                        <div className="video-details">
 
                             <Link to="/videoId">
-                                <div class="video-title">Minato a l'Akatsuki - The way of the ninja</div>
-                                <div class="video-channel">Naruto Way</div>
-                                <div class="more-details">
-                                    <div class="video-views">243k vues</div>
-                                    <div class="video-date">Il ya 4 jours</div>
+                                <div className="video-title">Minato a l'Akatsuki - The way of the ninja</div>
+                                <div className="video-channel">Naruto Way</div>
+                                <div className="more-details">
+                                    <div className="video-views">243k vues</div>
+                                    <div className="video-date">Il ya 4 jours</div>
                                 </div>
                             </Link>
 
@@ -105,27 +105,27 @@ const VideosList = () => {
 
 
                 <div className="video-item">
-                    <div class="video-screen">
+                    <div className="video-screen">
 
                         <Link to="/videoId">
                             <img src="./images/videos-img.png" alt="video" />
                         </Link>
 
-                        <span class="video-time">10:03</span>
+                        <span className="video-time">10:03</span>
 
                     </div>
-                    <div class="video-infos">
-                        <div class="author-avatar">
+                    <div className="video-infos">
+                        <div className="author-avatar">
                             <img src="./images/author-img.png" alt="author" />
                         </div>
-                        <div class="video-details">
+                        <div className="video-details">
 
                             <Link to="/videoId">
-                                <div class="video-title">Minato a l'Akatsuki - The way of the ninja</div>
-                                <div class="video-channel">Naruto Way</div>
-                                <div class="more-details">
-                                    <div class="video-views">243k vues</div>
-                                    <div class="video-date">Il ya 4 jours</div>
+                                <div className="video-title">Minato a l'Akatsuki - The way of the ninja</div>
+                                <div className="video-channel">Naruto Way</div>
+                                <div className="more-details">
+                                    <div className="video-views">243k vues</div>
+                                    <div className="video-date">Il ya 4 jours</div>
                                 </div>
                             </Link>
 
@@ -136,7 +136,7 @@ const VideosList = () => {
 
             </div>
 
-            <div class="separator">
+            <div className="separator">
                 <img src="./images/green-separator.png" alt="separator" />
             </div>
 
