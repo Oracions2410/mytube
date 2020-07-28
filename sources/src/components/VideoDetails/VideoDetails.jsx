@@ -1,13 +1,25 @@
 import React from 'react'
+import { useParams } from 'react-router-dom'
 
 import PlayList from './PlayList/PlayList'
 
-const VideoDetails = () => {
+
+const VideoDetails = ({ videos }) => {
+
+    const { id } = useParams()
+
+    const videoUrl = `https://www.youtube.com/embed/${id}`
+
     return <React.Fragment>
 
         <div className="video-player">
-            <div className="player">
-                <video className="player-inner" src="./videos/video.mp4" controls></video>
+            <div style={{ height: '400px' }} className="player">
+                <iframe style={{ height: '100%' }}
+                    frameBorder="0"
+                    width="100%" height="100%"
+                    title="video player"
+                    className="player-inner"
+                    src={videoUrl} controls></iframe>
             </div>
             <div className="video-infos">
                 <div className="video-author-avatar">
@@ -27,7 +39,7 @@ const VideoDetails = () => {
             </div>
         </div>
 
-        <PlayList />
+        <PlayList videos={videos} />
 
     </React.Fragment>
 }

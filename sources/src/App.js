@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
-import { Header, VideosList, VideoDetails } from './components'
-import { BrowserRouter, Route } from 'react-router-dom'
+import { Header, VideosList, VideoDetails, Loader } from './components'
+import { Route, Redirect } from 'react-router-dom'
 
 import youtube from './api/youtube'
 
@@ -9,45 +9,74 @@ const App = () => {
 
     const [videos, setVideos] = useState([])
     const [video, setVideo] = useState(null)
+    const [loading, setLoading] = useState(false)
+    const [notVideos, setNotVideos] = useState(false)
 
-    const findVideosData = async () => {
+    const findVideosData = async (searchTerms) => {
+        //console.log('q: ', searchTerms)
+        setLoading(true)
+        //setVideos([])
 
-        const response = await youtube.get('/search', {
-            params: {
-                part: 'snippet',
-                maxResults: 5,
-                key: 'AIzaSyCF2be36h31s9YC63CpT5J2Tby194OKXGU',
-                q: 'One Piece'
+        try {
+            const response = await youtube.get('/search', {
+                params: {
+                    part: 'snippet',
+                    maxResults: 12,
+                    /*key: 'AIzaSyCF2be36h31s9YC63CpT5J2Tby194OKXGU',*/
+                    key: 'AIzaSyAoROBF_kh0GAvMzy1_nInJ0e6FjDXAayc',
+                    q: searchTerms
+                }
+            })
+
+            const { data: { items } } = response
+
+            if (items.length === 0) {
+                setNotVideos(true)
+            } else {
+                setNotVideos(false)
             }
-        })
 
-        const { data: { items } } = response
+            console.log('--->', items)
+            setVideos(items)
+            //console.log(response)
 
-        console.log(items)
-        setVideos(items)
+            setLoading(false)
+
+        } catch (err) {
+            console.log(err)
+        }
 
     }
 
     useEffect(() => {
-        findVideosData()
+        async function fetchData() {
+            findVideosData('The shin sekai mes torts')
+        }
+
+        fetchData()
     }, [])
 
 
-
-    return <BrowserRouter>
-        <Header seachQuery={this.findVideosData} />
+    return <React.Fragment>
+        <Header searchQuery={findVideosData} />
         <main>
 
             <div className="container">
+                {loading ? <Loader /> : null}
                 <div className="content">
 
-                    <Route exact path="/" component={VideosList} />
-                    <Route path="/:id" component={VideoDetails} />
+                    {loading ? <Redirect to="/" /> : null}
+                    <Route exact path="/" render={() => <VideosList noVideos={notVideos} videos={videos} />} />
+                    <Route path="/:id" render={() => <VideoDetails videos={videos} video={video} />} />
 
                 </div>
             </div>
         </main>
-    </BrowserRouter>
+
+        <footer class="footer">
+            <p class="footer-text">Build by Oracions2410@gmail.com</p>
+        </footer>
+    </React.Fragment>
 }
 
 export default App
